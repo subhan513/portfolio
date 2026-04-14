@@ -7,10 +7,10 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="md:col-span-1">
           <Link to="/" className="font-heading text-xl font-bold text-foreground">
-            Nex<span className="gradient-text">Gen</span>
+            Goo<span className="gradient-text">vex</span>
           </Link>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-            Building scalable digital solutions for startups and enterprises worldwide.
+            Engineering high-performance digital solutions for startups and enterprises worldwide.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-10 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-xs text-muted-foreground">© 2026 NexGen Solutions. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground">© 2026 Goovex. All rights reserved.</p>
         <div className="flex gap-6">
           <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
           <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">Terms of Service</a>
