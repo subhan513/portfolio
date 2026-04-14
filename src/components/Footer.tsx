@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { GitlabIcon as Github, TwitterIcon as Twitter, LinkedinIcon as Linkedin, Mail } from "lucide-react";
 
 const Footer = () => (
   <footer className="border-t border-border bg-card/50">
