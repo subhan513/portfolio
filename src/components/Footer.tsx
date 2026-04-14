@@ -37,7 +37,7 @@ const Footer = () => (
         <div>
           <h4 className="font-heading font-semibold text-sm text-foreground mb-4">Connect</h4>
           <div className="flex gap-3">
-            {[Github, Twitter, Linkedin, Mail].map((Icon, i) => (
+            {[Globe, MessageCircle, LinkIcon, Mail].map((Icon, i) => (
               <a key={i} href="#" className="p-2 rounded-lg bg-secondary text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors">
                 <Icon size={18} />
               </a>
