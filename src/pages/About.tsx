@@ -21,7 +21,7 @@ const About = () => (
             Engineering the Future of <span className="gradient-text">Digital Innovation</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            NexGen Solutions was founded with a singular vision: to bridge the gap between ambitious ideas and scalable technology. We are a team of engineers, designers, and strategists who thrive on solving complex problems.
+            Goovex was founded with a singular vision: to bridge the gap between ambitious ideas and scalable technology. We are a team of engineers, designers, and strategists who thrive on solving complex problems.
           </p>
         </FadeIn>
       </div>

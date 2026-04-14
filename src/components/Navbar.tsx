@@ -38,7 +38,7 @@ const Navbar = () => {
     >
       <div className="container-narrow flex items-center justify-between h-16 px-6">
         <Link to="/" className="font-heading text-xl font-bold tracking-tight text-foreground">
-          Nex<span className="gradient-text">Gen</span>
+          Goo<span className="gradient-text">vex</span>
         </Link>
 
         {/* Desktop */}
