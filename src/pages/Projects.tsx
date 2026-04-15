@@ -1,6 +1,7 @@
 import { ExternalLink, Code } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
+import ecommerceMultivendor from "@/assets/ecommerce-multivendor.png";
 
 const projects = [
   {
@@ -13,37 +14,18 @@ const projects = [
     code: "https://github.com/subhan513/RealTime-Chat-App",
   },
   {
+    title: "Multi-Vendor E-Commerce Platform",
+    category: "Full Stack",
+    desc: "A multi-vendor e-commerce platform where sellers create stores, manage products, orders & wallet. Admin manages users, approves withdrawals. Buyers pay securely via Stripe with role-based authentication and full CRUD operations.",
+    tech: ["React.js", "Node.js", "Stripe", "MongoDB"],
+    image: ecommerceMultivendor,
+  },
+  {
     title: "E-Commerce Store & Admin Dashboard",
     category: "Full Stack",
     desc: "A full-stack e-commerce application with secure Stripe payments, Redis-powered real-time updates, and a comprehensive admin dashboard for managing products, orders, and users.",
     tech: ["React.js", "Node.js", "Stripe", "Redis"],
     image: "https://subhanwebdev.vercel.app/lovable-uploads/ecommerce.png",
-  },
-  {
-    title: "FullStack Recipe Finder App",
-    category: "App Development",
-    desc: "A comprehensive recipe discovery app that helps users find, save, and create delicious recipes with ingredient filtering and personalized recommendations.",
-    tech: ["React Native", "Node.js", "Express", "NeonDB"],
-    image: "https://subhanwebdev.vercel.app/lovable-uploads/mobile.png",
-    code: "https://github.com/subhan513/Recipe-Finder-App",
-  },
-  {
-    title: "SaaS Landing Pages",
-    category: "Web Development",
-    desc: "A production-focused project demonstrating clean architecture, responsive UI, and practical business value for SaaS companies.",
-    tech: ["React.js", "Tailwind CSS", "Responsive Design"],
-    image: "https://subhanwebdev.vercel.app/lovable-uploads/saas.png",
-    demo: "https://saas-landing-pages-self.vercel.app/",
-    code: "https://github.com/subhan513/SaaS-Landing-Pages",
-  },
-  {
-    title: "NewsMonkey — Headlines Platform",
-    category: "Web Development",
-    desc: "Stay updated with the latest news from around the world. Features top headlines covering stock market, politics, health, and current affairs with a clean, responsive interface.",
-    tech: ["React", "News API", "Real-time Updates"],
-    image: "https://subhanwebdev.vercel.app/lovable-uploads/efc34539-41a6-4d8b-9720-90395f2f231b.png",
-    demo: "https://newsapp-three-jet.vercel.app/",
-    code: "https://github.com/subhan513/newsapp",
   },
   {
     title: "Educational Institution Website",
