@@ -1,6 +1,7 @@
 import { ExternalLink, Code } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
+import ecommerceMultivendor from "@/assets/ecommerce-multivendor.png";
 
 const projects = [
   {
