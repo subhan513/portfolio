@@ -75,10 +75,10 @@ const About = () => (
               className="w-40 h-40 rounded-full object-cover border-4 border-primary/30 shadow-lg"
             />
             <div className="text-center md:text-left">
-              <h3 className="text-2xl font-bold font-heading text-foreground">Subhan Ahmed</h3>
+              <h3 className="text-2xl font-bold font-heading text-foreground">Muhammad Subhan</h3>
               <p className="text-primary font-medium mt-1">Founder & CEO</p>
               <p className="mt-3 text-muted-foreground leading-relaxed">
-                A passionate software engineer and tech entrepreneur with expertise in full-stack development, DevOps, and scalable architecture. Subhan founded Goovex with the mission to deliver enterprise-grade solutions that empower businesses to grow fearlessly.
+                A passionate software engineer and tech entrepreneur with expertise in full-stack development, DevOps, and scalable architecture. Muhammad Subhan founded Goovex with the mission to deliver enterprise-grade solutions that empower businesses to grow fearlessly.
               </p>
             </div>
           </div>

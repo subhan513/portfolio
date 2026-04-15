@@ -18,42 +18,42 @@ const testimonials = [
 const Index = () => (
   <Layout>
     {/* Hero */}
-    <section className="section-padding relative overflow-hidden min-h-[85vh] flex items-center">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.1),transparent_50%)]" />
-      <div className="absolute top-1/4 -right-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 -left-32 w-80 h-80 rounded-full bg-accent/5 blur-3xl animate-float" style={{ animationDelay: "3s" }} />
+    <section className="relative overflow-hidden min-h-screen flex items-center py-24 md:py-32 px-4">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.15),transparent_60%)]" />
+      <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] rounded-full bg-primary/8 blur-[100px] animate-float" />
+      <div className="absolute bottom-1/4 -left-32 w-[400px] h-[400px] rounded-full bg-accent/8 blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
       <div className="container-narrow relative">
-        <FadeIn className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-secondary/50 text-xs font-medium text-muted-foreground mb-8">
-            <span className="w-2 h-2 rounded-full gradient-bg animate-pulse" />
+        <FadeIn className="max-w-5xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-border bg-secondary/50 text-sm font-medium text-muted-foreground mb-10">
+            <span className="w-2.5 h-2.5 rounded-full gradient-bg animate-pulse" />
             Empowering businesses with next-gen technology
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading tracking-tight leading-[1.08] text-foreground">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight leading-[1.05] text-foreground">
             We Engineer Software{" "}
             <br className="hidden md:block" />
             That <span className="gradient-text">Drives Growth</span>
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-8 text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             From robust DevOps pipelines to stunning web & mobile applications — Goovex delivers end-to-end solutions that help you ship faster, scale effortlessly, and stay ahead of the competition.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="gradient-bg text-primary-foreground px-7 py-3.5 rounded-lg font-medium inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-base">
-              Start Your Project <ArrowRight size={18} />
+          <div className="mt-12 flex flex-col sm:flex-row gap-5 justify-center">
+            <Link to="/contact" className="gradient-bg text-primary-foreground px-9 py-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-lg shadow-lg shadow-primary/25">
+              Start Your Project <ArrowRight size={20} />
             </Link>
-            <Link to="/projects" className="px-7 py-3.5 rounded-lg font-medium border border-border text-foreground hover:bg-secondary transition-colors inline-flex items-center justify-center gap-2 text-base">
-              View Our Work <ChevronRight size={18} />
+            <Link to="/projects" className="px-9 py-4 rounded-xl font-semibold border border-border text-foreground hover:bg-secondary transition-colors inline-flex items-center justify-center gap-2 text-lg">
+              View Our Work <ChevronRight size={20} />
             </Link>
           </div>
 
           {/* Trust indicators */}
-          <div className="mt-12 flex flex-wrap justify-center gap-6 text-xs text-muted-foreground">
+          <div className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
             {[
               { icon: Shield, text: "Enterprise-Grade Security" },
               { icon: Zap, text: "99.9% Uptime Guarantee" },
               { icon: Globe, text: "Serving Clients Worldwide" },
             ].map((item) => (
-              <div key={item.text} className="flex items-center gap-1.5">
-                <item.icon size={14} className="text-primary" />
+              <div key={item.text} className="flex items-center gap-2">
+                <item.icon size={18} className="text-primary" />
                 {item.text}
               </div>
             ))}
