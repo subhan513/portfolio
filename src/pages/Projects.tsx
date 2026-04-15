@@ -13,15 +13,6 @@ const projects = [
     image: etihadEstate,
   },
   {
-    title: "Real Time Chat Application",
-    category: "Web Development",
-    desc: "A real-time chat application built with React, Node.js, and Socket.io, allowing users to chat in real-time. Features include user authentication, room creation, and message history.",
-    tech: ["React", "Node.js", "Socket.io", "Real-time Updates"],
-    image: "https://subhanwebdev.vercel.app/lovable-uploads/chatApp.png",
-    demo: "https://drive.google.com/file/d/1iZeOolkx5UUkKdilY6TN88BTsGWlOV62/view?usp=sharing",
-    code: "https://github.com/subhan513/RealTime-Chat-App",
-  },
-  {
     title: "Multi-Vendor E-Commerce Platform",
     category: "Full Stack",
     desc: "A multi-vendor e-commerce platform where sellers create stores, manage products, orders & wallet. Admin manages users, approves withdrawals. Buyers pay securely via Stripe with role-based authentication and full CRUD operations.",
