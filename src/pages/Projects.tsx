@@ -2,8 +2,16 @@ import { ExternalLink, Code } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
 import ecommerceMultivendor from "@/assets/ecommerce-multivendor.jpg";
+import etihadEstate from "@/assets/etihad-estate.jpg";
 
 const projects = [
+  {
+    title: "Etihad Estate — Real Estate Platform",
+    category: "Full Stack",
+    desc: "Discover, buy, sell, or rent properties effortlessly. Browse listings, explore neighborhoods, and post properties in minutes — a seamless, user-friendly real estate experience.",
+    tech: ["React.js", "Node.js", "MongoDB", "Tailwind CSS"],
+    image: etihadEstate,
+  },
   {
     title: "Real Time Chat Application",
     category: "Web Development",
