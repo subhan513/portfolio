@@ -24,10 +24,6 @@ const Index = () => (
       <div className="absolute bottom-1/4 -left-32 w-[400px] h-[400px] rounded-full bg-accent/8 blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
       <div className="container-narrow relative">
         <FadeIn className="max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-border bg-secondary/50 text-sm font-medium text-muted-foreground mb-10">
-            <span className="w-2.5 h-2.5 rounded-full gradient-bg animate-pulse" />
-            Empowering businesses with next-gen technology
-          </div>
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight leading-[1.05] text-foreground">
             We Engineer Software{" "}
             <br className="hidden md:block" />
