@@ -1,6 +1,7 @@
-import { Target, Eye, Heart, Users, Award, Zap } from "lucide-react";
+import { Target, Eye, Heart, Users, Award, Zap, Linkedin, Twitter } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
+import ceoImage from "@/assets/ceo.png";
 
 const values = [
   { icon: Target, title: "Mission-Driven", desc: "We focus on delivering real impact through technology." },
