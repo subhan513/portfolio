@@ -1,6 +1,7 @@
 import { Target, Eye, Heart, Users, Award, Zap } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
+import ceoImage from "@/assets/ceo.png";
 
 const values = [
   { icon: Target, title: "Mission-Driven", desc: "We focus on delivering real impact through technology." },
@@ -58,6 +59,30 @@ const About = () => (
             </div>
           </FadeIn>
         </div>
+      </div>
+    </section>
+
+    <section className="section-padding">
+      <div className="container-narrow">
+        <FadeIn className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground">Meet Our CEO</h2>
+        </FadeIn>
+        <FadeIn delay={0.15}>
+          <div className="glass-card p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 max-w-3xl mx-auto">
+            <img
+              src={ceoImage}
+              alt="CEO of Goovex"
+              className="w-40 h-40 rounded-full object-cover border-4 border-primary/30 shadow-lg"
+            />
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-bold font-heading text-foreground">Subhan Ahmed</h3>
+              <p className="text-primary font-medium mt-1">Founder & CEO</p>
+              <p className="mt-3 text-muted-foreground leading-relaxed">
+                A passionate software engineer and tech entrepreneur with expertise in full-stack development, DevOps, and scalable architecture. Subhan founded Goovex with the mission to deliver enterprise-grade solutions that empower businesses to grow fearlessly.
+              </p>
+            </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
 
