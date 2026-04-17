@@ -56,7 +56,7 @@ const Projects = () => (
             Projects That <span className="gradient-text">Speak for Themselves</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            A selection of real-world projects showcasing our expertise across full-stack web, mobile, and SaaS development.
+            A selection of real-world projects I've built — showcasing my expertise across full-stack web, mobile, and SaaS development.
           </p>
         </FadeIn>
       </div>

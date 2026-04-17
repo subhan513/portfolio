@@ -38,7 +38,7 @@ const Navbar = () => {
     >
       <div className="container-narrow flex items-center justify-between h-16 px-6">
         <Link to="/" className="font-heading text-xl font-bold tracking-tight text-foreground">
-          Goo<span className="gradient-text">vex</span>
+          Muhammad <span className="gradient-text">Subhan</span>
         </Link>
 
         {/* Desktop */}
@@ -58,7 +58,7 @@ const Navbar = () => {
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <Link to="/contact" className="gradient-bg text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
-            Get Started
+            Hire Me
           </Link>
         </div>
 
@@ -95,7 +95,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link to="/contact" className="gradient-bg text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium text-center mt-2">
-                Get Started
+                Hire Me
               </Link>
             </div>
           </motion.div>
