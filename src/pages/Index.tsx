@@ -1,19 +1,17 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Server, Code, Smartphone, Code2, Briefcase, Mail, Download, GraduationCap } from "lucide-react";
+import { ArrowRight, Code, Code2, Briefcase, Mail, Download, GraduationCap, Database, Server, Layout as LayoutIcon } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
 
 const services = [
   { icon: Code, title: "Web Development", desc: "Pixel-perfect React, Next.js & MERN applications engineered for speed, accessibility, and conversion." },
-  { icon: Smartphone, title: "App Development", desc: "Cross-platform mobile experiences with native performance and backends that scale to millions." },
-  { icon: Server, title: "DevOps & Cloud", desc: "Automated CI/CD pipelines, cloud-native infrastructure, and 24/7 monitoring to keep systems bulletproof." },
 ];
 
 const skills = [
-  { category: "Frontend", items: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "Framer Motion"] },
-  { category: "Backend", items: ["Node.js", "Express.js", "REST APIs", "GraphQL", "Socket.io", "JWT Auth"] },
-  { category: "Database", items: ["MongoDB", "PostgreSQL", "Redis", "Firebase", "Supabase", "Prisma"] },
-  { category: "DevOps & Tools", items: ["Docker", "AWS", "Vercel", "Git/GitHub", "CI/CD", "Linux"] },
+  { category: "Frontend", icon: LayoutIcon, items: ["React.js", "Next.js", "JavaScript", "Tailwind CSS", "Redux"] },
+  { category: "Backend", icon: Server, items: ["Node.js", "Express.js", "REST APIs", "JWT Auth"] },
+  { category: "Database", icon: Database, items: ["MongoDB", "Mongoose"] },
+  { category: "Tools", icon: Code2, items: ["Git/GitHub", "Postman", "VS Code", "Vercel"] },
 ];
 
 const experience = [
@@ -21,20 +19,20 @@ const experience = [
     role: "Full Stack Developer",
     company: "Freelance & Client Projects",
     period: "2023 — Present",
-    desc: "Building production-grade web & mobile apps for startups and SMBs. Delivered 10+ MERN/Next.js projects including e-commerce, real estate, and SaaS platforms.",
+    desc: "Building production-grade web apps for startups and SMBs. Delivered MERN/Next.js projects including e-commerce, real estate, and SaaS platforms.",
     icon: Briefcase,
   },
   {
     role: "MERN Stack Developer",
     company: "Open Source & Personal Projects",
     period: "2022 — 2023",
-    desc: "Developed full-stack applications with React, Node.js, and MongoDB. Contributed to open source projects and built portfolio of 20+ apps.",
+    desc: "Developed full-stack applications with React, Node.js, and MongoDB. Contributed to open source projects and built a portfolio of personal apps.",
     icon: Code,
   },
   {
     role: "Computer Science Student",
     company: "Bachelor's in Computer Science",
-    period: "2020 — Present",
+    period: "2023 — Present",
     desc: "Studying core CS fundamentals: algorithms, data structures, system design, and modern software engineering practices.",
     icon: GraduationCap,
   },
@@ -97,9 +95,9 @@ const Index = () => (
         {/* Stats */}
         <FadeIn delay={0.3} className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { value: "20+", label: "Projects Built" },
-            { value: "3+", label: "Years Experience" },
-            { value: "15+", label: "Happy Clients" },
+            { value: "5+", label: "Projects Built" },
+            { value: "2+", label: "Years Experience" },
+            { value: "1+", label: "Happy Clients" },
             { value: "100%", label: "Client Satisfaction" },
           ].map((stat) => (
             <div key={stat.label} className="glass-card p-6 text-center hover:border-primary/20 transition-colors">
@@ -119,7 +117,7 @@ const Index = () => (
           <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground">Services I Offer</h2>
           <p className="mt-3 text-muted-foreground max-w-xl mx-auto">End-to-end development services to bring your ideas to life — from concept to deployment.</p>
         </FadeIn>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-1 max-w-2xl mx-auto gap-6">
           {services.map((service, i) => (
             <FadeIn key={service.title} delay={i * 0.1}>
               <div className="glass-card p-8 group hover:border-primary/30 transition-all duration-300">
