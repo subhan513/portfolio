@@ -95,9 +95,9 @@ const Index = () => (
         {/* Stats */}
         <FadeIn delay={0.3} className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { value: "20+", label: "Projects Built" },
-            { value: "3+", label: "Years Experience" },
-            { value: "15+", label: "Happy Clients" },
+            { value: "5+", label: "Projects Built" },
+            { value: "2+", label: "Years Experience" },
+            { value: "1+", label: "Happy Clients" },
             { value: "100%", label: "Client Satisfaction" },
           ].map((stat) => (
             <div key={stat.label} className="glass-card p-6 text-center hover:border-primary/20 transition-colors">
@@ -117,7 +117,7 @@ const Index = () => (
           <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground">Services I Offer</h2>
           <p className="mt-3 text-muted-foreground max-w-xl mx-auto">End-to-end development services to bring your ideas to life — from concept to deployment.</p>
         </FadeIn>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-1 max-w-2xl mx-auto gap-6">
           {services.map((service, i) => (
             <FadeIn key={service.title} delay={i * 0.1}>
               <div className="glass-card p-8 group hover:border-primary/30 transition-all duration-300">
