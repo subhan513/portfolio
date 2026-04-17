@@ -33,7 +33,7 @@ const Contact = () => {
               Let&apos;s Build <span className="gradient-text">Something Great</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Have a project in mind? We&apos;d love to hear about it. Drop us a message and we&apos;ll respond within 24 hours.
+              Have a project in mind? I&apos;d love to hear about it. Drop me a message and I&apos;ll respond within 24 hours.
             </p>
           </FadeIn>
         </div>
@@ -89,9 +89,9 @@ const Contact = () => {
 
             <FadeIn delay={0.2} className="md:col-span-2 space-y-6">
               {[
-                { icon: Mail, label: "Email", value: "hello@nexgen.dev" },
-                { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-                { icon: MapPin, label: "Office", value: "San Francisco, CA" },
+                { icon: Mail, label: "Email", value: "subhan@example.com" },
+                { icon: Phone, label: "Phone", value: "+92 300 0000000" },
+                { icon: MapPin, label: "Location", value: "Pakistan — Available Worldwide" },
               ].map((info) => (
                 <div key={info.label} className="glass-card p-6 flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center shrink-0">

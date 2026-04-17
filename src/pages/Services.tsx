@@ -31,10 +31,10 @@ const Services = () => (
         <FadeIn className="max-w-3xl">
           <p className="text-sm font-medium text-primary mb-3">Services</p>
           <h1 className="text-4xl md:text-5xl font-bold font-heading text-foreground leading-tight">
-            Solutions That <span className="gradient-text">Scale With You</span>
+            Services I <span className="gradient-text">Provide</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            From infrastructure to interfaces, we deliver end-to-end solutions engineered for performance, security, and growth.
+            From infrastructure to interfaces, I deliver end-to-end solutions engineered for performance, security, and growth.
           </p>
         </FadeIn>
       </div>
