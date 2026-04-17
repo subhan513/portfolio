@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Code2, Briefcase, Mail, AtSign } from "lucide-react";
 
 const Footer = () => (
   <footer className="border-t border-border bg-card/50">
@@ -38,9 +38,9 @@ const Footer = () => (
           <h4 className="font-heading font-semibold text-sm text-foreground mb-4">Connect</h4>
           <div className="flex gap-3">
             {[
-              { Icon: Github, href: "https://github.com/subhan513", label: "GitHub" },
-              { Icon: Linkedin, href: "https://www.linkedin.com/in/muhammad-subhan", label: "LinkedIn" },
-              { Icon: Twitter, href: "#", label: "Twitter" },
+              { Icon: Code2, href: "https://github.com/subhan513", label: "GitHub" },
+              { Icon: Briefcase, href: "https://www.linkedin.com/in/muhammad-subhan", label: "LinkedIn" },
+              { Icon: AtSign, href: "#", label: "Twitter" },
               { Icon: Mail, href: "mailto:subhan@example.com", label: "Email" },
             ].map(({ Icon, href, label }) => (
               <a

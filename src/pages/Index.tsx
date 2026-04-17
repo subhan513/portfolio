@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Server, Code, Smartphone, ChevronRight, Github, Linkedin, Mail, Download, Briefcase, GraduationCap } from "lucide-react";
+import { ArrowRight, Server, Code, Smartphone, Code2, Briefcase, Mail, Download, GraduationCap } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
 
@@ -76,8 +76,8 @@ const Index = () => (
           {/* Social links */}
           <div className="mt-10 flex justify-center gap-4">
             {[
-              { Icon: Github, href: "https://github.com/subhan513", label: "GitHub" },
-              { Icon: Linkedin, href: "https://www.linkedin.com/in/muhammad-subhan", label: "LinkedIn" },
+              { Icon: Code2, href: "https://github.com/subhan513", label: "GitHub" },
+              { Icon: Briefcase, href: "https://www.linkedin.com/in/muhammad-subhan", label: "LinkedIn" },
               { Icon: Mail, href: "mailto:subhan@example.com", label: "Email" },
             ].map(({ Icon, href, label }) => (
               <a
