@@ -11,6 +11,7 @@ const projects = [
     desc: "Discover, buy, sell, or rent properties effortlessly. Browse listings, explore neighborhoods, and post properties in minutes — a seamless, user-friendly real estate experience.",
     tech: ["React.js", "Node.js", "MongoDB", "Tailwind CSS"],
     image: etihadEstate,
+    demo: "https://real-estate-mlx5.vercel.app/",
   },
   {
     title: "Multi-Vendor E-Commerce Platform",
@@ -18,6 +19,7 @@ const projects = [
     desc: "A multi-vendor e-commerce platform where sellers create stores, manage products, orders & wallet. Admin manages users, approves withdrawals. Buyers pay securely via Stripe with role-based authentication and full CRUD operations.",
     tech: ["React.js", "Node.js", "Stripe", "MongoDB"],
     image: ecommerceMultivendor,
+    demo: "https://multi-vendor-e-commerce-zrmx.vercel.app/",
   },
   {
     title: "E-Commerce Store & Admin Dashboard",
