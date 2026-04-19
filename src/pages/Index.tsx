@@ -47,9 +47,6 @@ const Index = () => (
       <div className="absolute bottom-1/4 -left-32 w-[400px] h-[400px] rounded-full bg-accent/8 blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
       <div className="container-narrow relative">
         <FadeIn className="max-w-5xl mx-auto text-center">
-          <p className="inline-block text-sm font-medium text-primary mb-6 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5">
-            👋 Hi, I'm Muhammad Subhan
-          </p>
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight leading-[1.05] text-foreground">
             Full Stack Developer{" "}
             <br className="hidden md:block" />
