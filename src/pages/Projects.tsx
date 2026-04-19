@@ -3,6 +3,7 @@ import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
 import ecommerceMultivendor from "@/assets/ecommerce-multivendor.jpg";
 import etihadEstate from "@/assets/etihad-estate.jpg";
+import bugHunterAi from "@/assets/bug-hunter-ai.jpg";
 
 const projects = [
   {
@@ -20,6 +21,14 @@ const projects = [
     tech: ["React.js", "Node.js", "Stripe", "MongoDB"],
     image: ecommerceMultivendor,
     demo: "https://multi-vendor-e-commerce-zrmx.vercel.app/",
+  },
+  {
+    title: "Bug Hunter AI — Interview & Debugging Platform",
+    category: "AI / Full Stack",
+    desc: "An AI-powered debugging coach and FAANG interview prep platform. Features iterative bug hunting, dynamic question generation, company-specific mock interviews (Google, Meta, Amazon), tailored difficulty levels, progressive smart hints, real-world case studies, and personalized skill feedback with progress tracking.",
+    tech: ["React", "AI/LLM", "Node.js", "Tailwind CSS"],
+    image: bugHunterAi,
+    demo: "https://bug-hunter-ai-tau.vercel.app/",
   },
   {
     title: "E-Commerce Store & Admin Dashboard",
