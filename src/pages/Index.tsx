@@ -53,7 +53,7 @@ const Index = () => (
             Building <span className="gradient-text">Modern Web Apps</span>
           </h1>
           <p className="mt-8 text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I craft scalable, high-performance web & mobile applications using the MERN stack, Next.js, and modern cloud infrastructure — turning ideas into polished digital products.
+            I craft scalable, high-performance web applications using the MERN stack and modern cloud infrastructure — turning ideas into polished digital products.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row gap-5 justify-center">
             <Link to="/projects" className="gradient-bg text-primary-foreground px-9 py-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-lg shadow-lg shadow-primary/25">
