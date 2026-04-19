@@ -89,9 +89,9 @@ const Contact = () => {
 
             <FadeIn delay={0.2} className="md:col-span-2 space-y-6">
               {[
-                { icon: Mail, label: "Email", value: "subhan@example.com" },
-                { icon: Phone, label: "Phone", value: "+92 300 0000000" },
-                { icon: MapPin, label: "Location", value: "Pakistan — Available Worldwide" },
+                { icon: Mail, label: "Email", value: "subhancs57@gmail.com" },
+                { icon: Phone, label: "Phone", value: "+92 328 8101603" },
+                { icon: MapPin, label: "Location", value: "Remote — Pakistan" },
               ].map((info) => (
                 <div key={info.label} className="glass-card p-6 flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center shrink-0">
