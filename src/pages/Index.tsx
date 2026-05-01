@@ -181,8 +181,9 @@ const Index = () => (
                 <h3 className="font-heading font-semibold text-foreground mb-4">{group.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (
-                    <span key={item} className="text-xs px-3 py-1.5 rounded-full bg-secondary text-muted-foreground border border-border">
-                      {item}
+                    <span key={item.name} className="text-xs px-3 py-1.5 rounded-full bg-secondary text-muted-foreground border border-border inline-flex items-center gap-1.5">
+                      <item.icon size={14} style={{ color: item.color }} />
+                      {item.name}
                     </span>
                   ))}
                 </div>
