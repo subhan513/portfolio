@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Code, Code2, Briefcase, Mail, Download, GraduationCap, Database, Server, Layout as LayoutIcon } from "lucide-react";
+import { ArrowRight, Code, Code2, Briefcase, Mail, GraduationCap } from "lucide-react";
+import {
+  SiReact, SiNextdotjs, SiJavascript, SiTailwindcss, SiRedux,
+  SiNodedotjs, SiExpress, SiJsonwebtokens,
+  SiMongodb, SiMongoose,
+  SiGit, SiGithub, SiPostman, SiVercel,
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+import { TbApi } from "react-icons/tb";
 import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
 
@@ -8,10 +16,42 @@ const services = [
 ];
 
 const skills = [
-  { category: "Frontend", icon: LayoutIcon, items: ["React.js", "Next.js", "JavaScript", "Tailwind CSS", "Redux"] },
-  { category: "Backend", icon: Server, items: ["Node.js", "Express.js", "REST APIs", "JWT Auth"] },
-  { category: "Database", icon: Database, items: ["MongoDB", "Mongoose"] },
-  { category: "Tools", icon: Code2, items: ["Git/GitHub", "Postman", "VS Code", "Vercel"] },
+  {
+    category: "Frontend",
+    items: [
+      { name: "React.js", icon: SiReact, color: "#61DAFB" },
+      { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Redux", icon: SiRedux, color: "#764ABC" },
+    ],
+  },
+  {
+    category: "Backend",
+    items: [
+      { name: "Node.js", icon: SiNodedotjs, color: "#5FA04E" },
+      { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
+      { name: "REST APIs", icon: TbApi, color: "#10B981" },
+      { name: "JWT Auth", icon: SiJsonwebtokens, color: "#D63AFF" },
+    ],
+  },
+  {
+    category: "Database",
+    items: [
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "Mongoose", icon: SiMongoose, color: "#880000" },
+    ],
+  },
+  {
+    category: "Tools",
+    items: [
+      { name: "Git", icon: SiGit, color: "#F05032" },
+      { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
+      { name: "Postman", icon: SiPostman, color: "#FF6C37" },
+      { name: "VS Code", icon: VscVscode, color: "#007ACC" },
+      { name: "Vercel", icon: SiVercel, color: "#FFFFFF" },
+    ],
+  },
 ];
 
 const experience = [
@@ -55,17 +95,10 @@ const Index = () => (
           <p className="mt-8 text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             I craft scalable, high-performance web applications using the MERN stack and modern cloud infrastructure — turning ideas into polished digital products.
           </p>
-          <div className="mt-12 flex flex-col sm:flex-row gap-5 justify-center">
+          <div className="mt-12 flex justify-center">
             <Link to="/projects" className="gradient-bg text-primary-foreground px-9 py-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-lg shadow-lg shadow-primary/25">
               View My Work <ArrowRight size={20} />
             </Link>
-            <a
-              href="/resume.pdf"
-              download
-              className="px-9 py-4 rounded-xl font-semibold border border-border text-foreground hover:bg-secondary transition-colors inline-flex items-center justify-center gap-2 text-lg"
-            >
-              Download Resume <Download size={20} />
-            </a>
           </div>
 
           {/* Social links */}
@@ -148,8 +181,9 @@ const Index = () => (
                 <h3 className="font-heading font-semibold text-foreground mb-4">{group.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (
-                    <span key={item} className="text-xs px-3 py-1.5 rounded-full bg-secondary text-muted-foreground border border-border">
-                      {item}
+                    <span key={item.name} className="text-xs px-3 py-1.5 rounded-full bg-secondary text-muted-foreground border border-border inline-flex items-center gap-1.5">
+                      <item.icon size={14} style={{ color: item.color }} />
+                      {item.name}
                     </span>
                   ))}
                 </div>
