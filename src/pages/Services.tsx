@@ -1,26 +1,14 @@
-import { Server, Code, Smartphone, CheckCircle, ArrowRight } from "lucide-react";
+import { Code, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
 
 const services = [
   {
-    icon: Server,
-    title: "DevOps Solutions",
-    desc: "Streamline your development workflow with automated CI/CD pipelines, cloud-native deployments, and comprehensive monitoring.",
-    features: ["CI/CD Pipeline Setup", "Cloud Migration (AWS, GCP, Azure)", "Infrastructure as Code", "24/7 Monitoring & Alerting", "Container Orchestration", "Security & Compliance"],
-  },
-  {
     icon: Code,
     title: "Web Development",
     desc: "High-performance web applications built with modern frameworks, optimized for speed, accessibility, and conversion.",
     features: ["React & Next.js Applications", "MERN Stack Development", "Progressive Web Apps", "E-commerce Platforms", "Custom CMS Solutions", "Performance Optimization"],
-  },
-  {
-    icon: Smartphone,
-    title: "App Development",
-    desc: "Cross-platform mobile applications with native performance, scalable backends, and exceptional user experiences.",
-    features: ["React Native & Flutter", "iOS & Android Native", "Backend API Development", "Real-time Features", "Push Notifications", "App Store Optimization"],
   },
 ];
 
