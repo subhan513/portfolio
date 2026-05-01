@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Code, Code2, Briefcase, Mail, Download, GraduationCap, Database, Server, Layout as LayoutIcon } from "lucide-react";
+import { ArrowRight, Code, Code2, Briefcase, Mail, GraduationCap } from "lucide-react";
+import {
+  SiReact, SiNextdotjs, SiJavascript, SiTailwindcss, SiRedux,
+  SiNodedotjs, SiExpress, SiJsonwebtokens,
+  SiMongodb, SiMongoose,
+  SiGit, SiGithub, SiPostman, SiVercel,
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+import { TbApi } from "react-icons/tb";
 import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
 
@@ -8,10 +16,42 @@ const services = [
 ];
 
 const skills = [
-  { category: "Frontend", icon: LayoutIcon, items: ["React.js", "Next.js", "JavaScript", "Tailwind CSS", "Redux"] },
-  { category: "Backend", icon: Server, items: ["Node.js", "Express.js", "REST APIs", "JWT Auth"] },
-  { category: "Database", icon: Database, items: ["MongoDB", "Mongoose"] },
-  { category: "Tools", icon: Code2, items: ["Git/GitHub", "Postman", "VS Code", "Vercel"] },
+  {
+    category: "Frontend",
+    items: [
+      { name: "React.js", icon: SiReact, color: "#61DAFB" },
+      { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Redux", icon: SiRedux, color: "#764ABC" },
+    ],
+  },
+  {
+    category: "Backend",
+    items: [
+      { name: "Node.js", icon: SiNodedotjs, color: "#5FA04E" },
+      { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
+      { name: "REST APIs", icon: TbApi, color: "#10B981" },
+      { name: "JWT Auth", icon: SiJsonwebtokens, color: "#D63AFF" },
+    ],
+  },
+  {
+    category: "Database",
+    items: [
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "Mongoose", icon: SiMongoose, color: "#880000" },
+    ],
+  },
+  {
+    category: "Tools",
+    items: [
+      { name: "Git", icon: SiGit, color: "#F05032" },
+      { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
+      { name: "Postman", icon: SiPostman, color: "#FF6C37" },
+      { name: "VS Code", icon: VscVscode, color: "#007ACC" },
+      { name: "Vercel", icon: SiVercel, color: "#FFFFFF" },
+    ],
+  },
 ];
 
 const experience = [
