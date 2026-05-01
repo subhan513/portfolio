@@ -95,17 +95,10 @@ const Index = () => (
           <p className="mt-8 text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             I craft scalable, high-performance web applications using the MERN stack and modern cloud infrastructure — turning ideas into polished digital products.
           </p>
-          <div className="mt-12 flex flex-col sm:flex-row gap-5 justify-center">
+          <div className="mt-12 flex justify-center">
             <Link to="/projects" className="gradient-bg text-primary-foreground px-9 py-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-lg shadow-lg shadow-primary/25">
               View My Work <ArrowRight size={20} />
             </Link>
-            <a
-              href="/resume.pdf"
-              download
-              className="px-9 py-4 rounded-xl font-semibold border border-border text-foreground hover:bg-secondary transition-colors inline-flex items-center justify-center gap-2 text-lg"
-            >
-              Download Resume <Download size={20} />
-            </a>
           </div>
 
           {/* Social links */}
