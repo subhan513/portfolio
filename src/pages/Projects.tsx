@@ -4,6 +4,9 @@ import Layout from "@/components/Layout";
 import ecommerceMultivendor from "@/assets/ecommerce-multivendor.jpg";
 import etihadEstate from "@/assets/etihad-estate.jpg";
 import bugHunterAi from "@/assets/bug-hunter-ai.jpg";
+import ecommerceAdmin from "@/assets/ecommerce-admin.jpg";
+import educationalWebsite from "@/assets/educational-website.jpg";
+import moviePlatform from "@/assets/movie-platform.jpg";
 
 const projects = [
   {
