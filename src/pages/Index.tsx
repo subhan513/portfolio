@@ -105,7 +105,7 @@ const Index = () => (
           <div className="mt-10 flex justify-center gap-4">
             {[
               { Icon: Code2, href: "https://github.com/subhan513", label: "GitHub" },
-              { Icon: Briefcase, href: "https://www.linkedin.com/in/muhammad-subhan", label: "LinkedIn" },
+              { Icon: Briefcase, href: "https://www.linkedin.com/in/muhammadsubhandev/", label: "LinkedIn" },
               { Icon: Mail, href: "mailto:subhancs57@gmail.com", label: "Email" },
             ].map(({ Icon, href, label }) => (
               <a
