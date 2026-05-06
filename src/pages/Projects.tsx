@@ -4,6 +4,9 @@ import Layout from "@/components/Layout";
 import ecommerceMultivendor from "@/assets/ecommerce-multivendor.jpg";
 import etihadEstate from "@/assets/etihad-estate.jpg";
 import bugHunterAi from "@/assets/bug-hunter-ai.jpg";
+import ecommerceAdmin from "@/assets/ecommerce-admin.jpg";
+import educationalWebsite from "@/assets/educational-website.jpg";
+import moviePlatform from "@/assets/movie-platform.jpg";
 
 const projects = [
   {
@@ -35,14 +38,14 @@ const projects = [
     category: "Full Stack",
     desc: "A full-stack e-commerce application with secure Stripe payments, Redis-powered real-time updates, and a comprehensive admin dashboard for managing products, orders, and users.",
     tech: ["React.js", "Node.js", "Stripe", "Redis"],
-    image: "https://subhanwebdev.vercel.app/lovable-uploads/ecommerce.png",
+    image: ecommerceAdmin,
   },
   {
     title: "Educational Institution Website",
     category: "Web Development",
     desc: "A comprehensive educational platform with admission management, institutional information, and an inspiring mission-driven design for students and faculty.",
     tech: ["React", "Tailwind CSS", "CMS"],
-    image: "https://subhanwebdev.vercel.app/lovable-uploads/6c0347b2-15cf-414d-962f-8b9ba9a86da8.png",
+    image: educationalWebsite,
     demo: "https://sharifeducaitonalcomplex.vercel.app/",
     code: "https://github.com/subhan513/Sharif-Complex",
   },
@@ -51,7 +54,7 @@ const projects = [
     category: "Web Development",
     desc: "Discover the latest movies and entertainment content with an immersive viewing experience, browse trending blockbusters with stunning visual presentation.",
     tech: ["React", "Appwrite", "API Integration", "Tailwind CSS"],
-    image: "https://subhanwebdev.vercel.app/lovable-uploads/7e5f0ea2-1a8a-4132-bc7b-a18630cef7fc.png",
+    image: moviePlatform,
     demo: "https://movie-application-git-main-subhan513s-projects.vercel.app/",
     code: "https://github.com/subhan513/movie-app",
   },
