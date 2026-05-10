@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Code, Code2, Briefcase, Mail, GraduationCap } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
+import heroBg from "@/assets/hero-bg.mp4.asset.json";
 import {
   SiReact, SiNextdotjs, SiJavascript, SiTailwindcss, SiRedux,
   SiNodedotjs, SiExpress, SiJsonwebtokens,
