@@ -125,7 +125,9 @@ const Index = () => (
               "Turning ideas into polished digital products that users love and businesses rely on.",
             ].map((t) => (
               <SwiperSlide key={t}>
-                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed pb-10">{t}</p>
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed px-4 min-h-[140px] flex items-center justify-center text-center">
+                  {t}
+                </p>
               </SwiperSlide>
             ))}
           </Swiper>
