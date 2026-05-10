@@ -114,10 +114,13 @@ const Index = () => (
           <Swiper
             modules={[Autoplay, EffectFade, Pagination]}
             effect="fade"
+            fadeEffect={{ crossFade: true }}
+            slidesPerView={1}
+            allowTouchMove={false}
             autoplay={{ delay: 3500, disableOnInteraction: false }}
             loop
             pagination={{ clickable: true }}
-            className="mt-8 max-w-3xl mx-auto"
+            className="hero-copy-swiper mt-8 max-w-3xl mx-auto"
           >
             {[
               "I craft scalable, high-performance web apps using the MERN stack and modern cloud infrastructure.",
@@ -125,7 +128,7 @@ const Index = () => (
               "Turning ideas into polished digital products that users love and businesses rely on.",
             ].map((t) => (
               <SwiperSlide key={t}>
-                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed px-4 min-h-[140px] flex items-center justify-center text-center">
+                <p className="h-32 md:h-28 text-xl md:text-2xl text-muted-foreground leading-relaxed px-4 flex items-center justify-center text-center">
                   {t}
                 </p>
               </SwiperSlide>
