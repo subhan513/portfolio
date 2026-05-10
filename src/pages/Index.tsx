@@ -88,9 +88,20 @@ const Index = () => (
   <Layout>
     {/* Hero */}
     <section className="relative overflow-hidden min-h-screen flex items-center py-24 md:py-32 px-4">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.15),transparent_60%)]" />
-      <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] rounded-full bg-primary/8 blur-[100px] animate-float" />
-      <div className="absolute bottom-1/4 -left-32 w-[400px] h-[400px] rounded-full bg-accent/8 blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
+      >
+        <source src={heroBg.url} type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-background/70" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.25),transparent_60%)]" />
+      <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[100px] animate-float" />
+      <div className="absolute bottom-1/4 -left-32 w-[400px] h-[400px] rounded-full bg-accent/10 blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
       <div className="container-narrow relative">
         <FadeIn className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight leading-[1.05] text-foreground">
@@ -98,9 +109,26 @@ const Index = () => (
             <br className="hidden md:block" />
             Building <span className="gradient-text">Modern Web Apps</span>
           </h1>
-          <p className="mt-8 text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I craft scalable, high-performance web applications using the MERN stack and modern cloud infrastructure — turning ideas into polished digital products.
-          </p>
+
+          {/* Swiper rotating taglines */}
+          <Swiper
+            modules={[Autoplay, EffectFade, Pagination]}
+            effect="fade"
+            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            loop
+            pagination={{ clickable: true }}
+            className="mt-8 max-w-3xl mx-auto"
+          >
+            {[
+              "I craft scalable, high-performance web apps using the MERN stack and modern cloud infrastructure.",
+              "From concept to deployment — pixel-perfect React & Next.js experiences engineered for speed.",
+              "Turning ideas into polished digital products that users love and businesses rely on.",
+            ].map((t) => (
+              <SwiperSlide key={t}>
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed pb-10">{t}</p>
+              </SwiperSlide>
+            ))}
+          </Swiper>
           <div className="mt-12 flex justify-center">
             <Link to="/projects" className="gradient-bg text-primary-foreground px-9 py-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-lg shadow-lg shadow-primary/25">
               View My Work <ArrowRight size={20} />
