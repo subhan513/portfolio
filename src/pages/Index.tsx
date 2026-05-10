@@ -212,13 +212,17 @@ const Index = () => (
           {skills.map((group, i) => (
             <FadeIn key={group.category} delay={i * 0.08}>
               <div className="glass-card p-6 h-full hover:border-primary/30 transition-colors">
-                <h3 className="font-heading font-semibold text-foreground mb-4">{group.category}</h3>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="font-heading font-semibold text-foreground mb-5 text-center">{group.category}</h3>
+                <div className="grid grid-cols-3 gap-3">
                   {group.items.map((item) => (
-                    <span key={item.name} className="text-xs px-3 py-1.5 rounded-full bg-secondary text-muted-foreground border border-border inline-flex items-center gap-1.5">
-                      <item.icon size={14} style={{ color: item.color }} />
-                      {item.name}
-                    </span>
+                    <div
+                      key={item.name}
+                      className="group flex flex-col items-center justify-center gap-2 p-3 rounded-xl bg-secondary/50 border border-border hover:border-primary/40 hover:bg-secondary transition-all hover:-translate-y-1"
+                      title={item.name}
+                    >
+                      <item.icon size={36} style={{ color: item.color }} className="transition-transform group-hover:scale-110" />
+                      <span className="text-[10px] text-muted-foreground text-center leading-tight">{item.name}</span>
+                    </div>
                   ))}
                 </div>
               </div>
