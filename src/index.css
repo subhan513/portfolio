@@ -113,6 +113,19 @@
   .container-narrow {
     @apply max-w-6xl mx-auto;
   }
+  .hero-copy-swiper {
+    @apply pb-8;
+  }
+  .hero-copy-swiper .swiper-wrapper,
+  .hero-copy-swiper .swiper-slide {
+    @apply h-32 md:h-28;
+  }
+  .hero-copy-swiper .swiper-slide {
+    @apply opacity-0 pointer-events-none;
+  }
+  .hero-copy-swiper .swiper-slide-active {
+    @apply opacity-100 pointer-events-auto;
+  }
 }
 
 html {
