@@ -87,7 +87,7 @@ const experience = [
 const Index = () => (
   <Layout>
     {/* Hero */}
-    <section className="relative overflow-hidden min-h-[100svh] flex items-center py-20 sm:py-24 md:py-32 px-4">
+    <section className="relative w-full overflow-x-hidden overflow-y-hidden min-h-[100svh] flex items-center py-20 sm:py-24 md:py-32 px-4">
       {/* Background video */}
       <video
         autoPlay
@@ -102,12 +102,12 @@ const Index = () => (
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.25),transparent_60%)]" />
       <div className="absolute top-1/4 -right-32 hidden h-[500px] w-[500px] rounded-full bg-primary/10 blur-[100px] animate-float sm:block" />
       <div className="absolute bottom-1/4 -left-32 hidden h-[400px] w-[400px] rounded-full bg-accent/10 blur-[100px] animate-float sm:block" style={{ animationDelay: "3s" }} />
-      <div className="container-narrow relative">
-        <FadeIn className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight leading-[1.08] md:leading-[1.05] text-foreground">
-            Full Stack Developer{" "}
+      <div className="container-narrow relative w-full min-w-0">
+        <FadeIn className="w-full max-w-5xl mx-auto text-center">
+          <h1 className="mx-auto max-w-[22rem] sm:max-w-2xl md:max-w-5xl text-3xl min-[380px]:text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight leading-[1.12] md:leading-[1.05] text-foreground break-words">
+            Full Stack <span className="block sm:inline">Developer</span>{" "}
             <br className="hidden md:block" />
-            Building <span className="gradient-text">Modern Web Apps</span>
+            <span className="block sm:inline">Building <span className="gradient-text">Modern Web Apps</span></span>
           </h1>
 
           {/* Swiper rotating taglines */}
@@ -128,8 +128,8 @@ const Index = () => (
               "Turning ideas into polished digital products that users love and businesses rely on.",
             ].map((t) => (
               <SwiperSlide key={t}>
-                <p className="h-28 sm:h-24 md:h-28 text-base sm:text-lg md:text-2xl text-muted-foreground leading-7 md:leading-relaxed px-1 sm:px-4 flex items-center justify-center text-center">
-                  {t}
+                <p className="h-28 sm:h-24 md:h-28 text-base sm:text-lg md:text-2xl text-muted-foreground leading-7 md:leading-relaxed px-1 sm:px-4 flex items-center justify-center text-center overflow-hidden">
+                  <span className="block max-w-full whitespace-normal break-words">{t}</span>
                 </p>
               </SwiperSlide>
             ))}
