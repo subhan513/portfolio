@@ -87,7 +87,7 @@ const experience = [
 const Index = () => (
   <Layout>
     {/* Hero */}
-    <section className="relative overflow-hidden min-h-screen flex items-center py-24 md:py-32 px-4">
+    <section className="relative w-full overflow-x-hidden overflow-y-hidden min-h-[100svh] flex items-center py-20 sm:py-24 md:py-32 px-4">
       {/* Background video */}
       <video
         autoPlay
@@ -100,14 +100,14 @@ const Index = () => (
       </video>
       <div className="absolute inset-0 bg-background/70" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.25),transparent_60%)]" />
-      <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[100px] animate-float" />
-      <div className="absolute bottom-1/4 -left-32 w-[400px] h-[400px] rounded-full bg-accent/10 blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
-      <div className="container-narrow relative">
-        <FadeIn className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight leading-[1.05] text-foreground">
-            Full Stack Developer{" "}
+      <div className="absolute top-1/4 -right-32 hidden h-[500px] w-[500px] rounded-full bg-primary/10 blur-[100px] animate-float sm:block" />
+      <div className="absolute bottom-1/4 -left-32 hidden h-[400px] w-[400px] rounded-full bg-accent/10 blur-[100px] animate-float sm:block" style={{ animationDelay: "3s" }} />
+      <div className="container-narrow relative w-full min-w-0">
+        <FadeIn className="w-full max-w-5xl mx-auto text-center">
+          <h1 className="mx-auto max-w-[22rem] sm:max-w-2xl md:max-w-5xl text-3xl min-[380px]:text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight leading-[1.12] md:leading-[1.05] text-foreground break-words">
+            Full Stack <span className="block sm:inline">Developer</span>{" "}
             <br className="hidden md:block" />
-            Building <span className="gradient-text">Modern Web Apps</span>
+            <span className="block sm:inline">Building <span className="gradient-text">Modern Web Apps</span></span>
           </h1>
 
           {/* Swiper rotating taglines */}
@@ -120,7 +120,7 @@ const Index = () => (
             autoplay={{ delay: 3500, disableOnInteraction: false }}
             loop
             pagination={{ clickable: true }}
-            className="hero-copy-swiper mt-8 max-w-3xl mx-auto"
+            className="hero-copy-swiper mt-6 md:mt-8 max-w-3xl mx-auto"
           >
             {[
               "I craft scalable, high-performance web apps using the MERN stack and modern cloud infrastructure.",
@@ -128,20 +128,20 @@ const Index = () => (
               "Turning ideas into polished digital products that users love and businesses rely on.",
             ].map((t) => (
               <SwiperSlide key={t}>
-                <p className="h-32 md:h-28 text-xl md:text-2xl text-muted-foreground leading-relaxed px-4 flex items-center justify-center text-center">
-                  {t}
+                <p className="h-28 sm:h-24 md:h-28 text-base sm:text-lg md:text-2xl text-muted-foreground leading-7 md:leading-relaxed px-1 sm:px-4 flex items-center justify-center text-center overflow-hidden">
+                  <span className="block max-w-full whitespace-normal break-words">{t}</span>
                 </p>
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="mt-12 flex justify-center">
-            <Link to="/projects" className="gradient-bg text-primary-foreground px-9 py-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-lg shadow-lg shadow-primary/25">
+          <div className="mt-8 md:mt-12 flex justify-center">
+            <Link to="/projects" className="gradient-bg text-primary-foreground px-7 py-3 md:px-9 md:py-4 rounded-lg md:rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-base md:text-lg shadow-lg shadow-primary/25">
               View My Work <ArrowRight size={20} />
             </Link>
           </div>
 
           {/* Social links */}
-          <div className="mt-10 flex justify-center gap-4">
+          <div className="mt-7 md:mt-10 flex justify-center gap-3 md:gap-4">
             {[
               { Icon: Code2, href: "https://github.com/subhan513", label: "GitHub" },
               { Icon: Briefcase, href: "https://www.linkedin.com/in/muhammadsubhanwebdev/", label: "LinkedIn" },
@@ -153,7 +153,7 @@ const Index = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="p-3 rounded-xl glass-card hover:border-primary/40 text-muted-foreground hover:text-primary transition-all"
+                className="p-2.5 md:p-3 rounded-xl glass-card hover:border-primary/40 text-muted-foreground hover:text-primary transition-all"
               >
                 <Icon size={20} />
               </a>
@@ -162,16 +162,16 @@ const Index = () => (
         </FadeIn>
 
         {/* Stats */}
-        <FadeIn delay={0.3} className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <FadeIn delay={0.3} className="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
           {[
             { value: "5+", label: "Projects Built" },
             { value: "2+", label: "Years Experience" },
             { value: "1+", label: "Happy Clients" },
             { value: "100%", label: "Client Satisfaction" },
           ].map((stat) => (
-            <div key={stat.label} className="glass-card p-6 text-center hover:border-primary/20 transition-colors">
+            <div key={stat.label} className="glass-card p-4 md:p-6 text-center hover:border-primary/20 transition-colors">
               <div className="text-2xl md:text-3xl font-bold font-heading gradient-text">{stat.value}</div>
-              <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+              <div className="text-xs sm:text-sm text-muted-foreground mt-1">{stat.label}</div>
             </div>
           ))}
         </FadeIn>
