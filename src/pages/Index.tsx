@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import heroBg from "@/assets/hero-bg.mp4.asset.json";
-import portrait from "@/assets/subhan-portrait.png.asset.json";
+
 
 import {
   SiReact, SiNextdotjs, SiJavascript, SiTailwindcss, SiRedux,
