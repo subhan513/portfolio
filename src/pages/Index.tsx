@@ -114,29 +114,6 @@ const Index = () => (
       <div className="absolute bottom-1/4 -left-32 hidden h-[400px] w-[400px] rounded-full bg-accent/10 blur-[100px] animate-float sm:block" style={{ animationDelay: "3s" }} />
       <div className="container-narrow relative w-full min-w-0">
         <FadeIn className="w-full max-w-5xl mx-auto text-center">
-          {/* 3D rotating portrait */}
-          <div className="mb-8 md:mb-10 flex justify-center perspective-1000">
-            <div className="relative animate-float-slow">
-              {/* radial glow ring behind */}
-              <div className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle_at_center,hsl(var(--primary)/0.55),hsl(var(--primary)/0.15)_45%,transparent_70%)] blur-2xl scale-125" />
-              {/* conic gradient ring */}
-              <div className="absolute -inset-3 rounded-full bg-[conic-gradient(from_0deg,hsl(var(--primary)),transparent_35%,hsl(var(--primary))_70%,transparent)] blur-[2px] opacity-80 animate-spin-y" style={{ animationDuration: "18s" }} />
-              <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 preserve-3d animate-spin-y">
-                <img
-                  src={portrait.url}
-                  alt="Muhammad Subhan — Full Stack Developer"
-                  className="absolute inset-0 w-full h-full rounded-full object-cover border-4 border-primary/70 shadow-[0_20px_60px_-10px_hsl(var(--primary)/0.6)] backface-hidden"
-                />
-                <img
-                  src={portrait.url}
-                  alt=""
-                  aria-hidden
-                  className="absolute inset-0 w-full h-full rounded-full object-cover border-4 border-primary/70 shadow-[0_20px_60px_-10px_hsl(var(--primary)/0.6)] backface-hidden"
-                  style={{ transform: "rotateY(180deg) scaleX(-1)" }}
-                />
-              </div>
-            </div>
-          </div>
 
           <h1 className="mx-auto max-w-[22rem] sm:max-w-2xl md:max-w-5xl text-3xl min-[380px]:text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight leading-[1.12] md:leading-[1.05] text-foreground break-words">
 
