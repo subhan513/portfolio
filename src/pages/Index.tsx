@@ -172,11 +172,12 @@ const Index = () => (
         {/* Stats */}
         <FadeIn delay={0.3} className="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
           {[
-            { value: "5+", label: "Projects Built" },
-            { value: "2+", label: "Years Experience" },
-            { value: "1+", label: "Happy Clients" },
-            { value: "100%", label: "Client Satisfaction" },
+            { value: "6+", label: "Projects Shipped" },
+            { value: "1+", label: "Years Experience" },
+            { value: "3", label: "Companies Worked" },
+            { value: "150+", label: "DSA Problems Solved" },
           ].map((stat) => (
+
             <div key={stat.label} className="glass-card p-4 md:p-6 text-center hover:border-primary/20 transition-colors">
               <div className="text-2xl md:text-3xl font-bold font-heading gradient-text">{stat.value}</div>
               <div className="text-xs sm:text-sm text-muted-foreground mt-1">{stat.label}</div>
