@@ -62,27 +62,35 @@ const skills = [
 
 const experience = [
   {
-    role: "Full Stack Developer",
-    company: "Freelance & Client Projects",
-    period: "2023 — Present",
-    desc: "Building production-grade web apps for startups and SMBs. Delivered MERN/Next.js projects including e-commerce, real estate, and SaaS platforms.",
+    role: "Software Developer",
+    company: "TenX — Lahore, Pakistan (Hybrid)",
+    period: "Jun 2026",
+    desc: "Built production API architecture using Node.js, Express, PostgreSQL and Redis caching. Implemented JWT auth, RBAC, file uploads, and background jobs for User & Product modules. Optimized DB queries and API performance by fixing N+1 issues and adding eager loading.",
     icon: Briefcase,
   },
   {
-    role: "MERN Stack Developer",
-    company: "Open Source & Personal Projects",
-    period: "2022 — 2023",
-    desc: "Developed full-stack applications with React, Node.js, and MongoDB. Contributed to open source projects and built a portfolio of personal apps.",
+    role: "Full Stack Developer",
+    company: "ZedStack — Lahore, Pakistan (Hybrid)",
+    period: "Apr 2025 — Sep 2025",
+    desc: "Developed an AI-powered Headshot Generator using the MERN stack. Integrated AI APIs for image generation and reduced processing time by ~30%. Built a responsive React interface for seamless upload, preview, and generation workflow.",
     icon: Code,
   },
   {
-    role: "Computer Science Student",
-    company: "Bachelor's in Computer Science",
-    period: "2023 — Present",
-    desc: "Studying core CS fundamentals: algorithms, data structures, system design, and modern software engineering practices.",
+    role: "Software Engineering & DSA Mentee",
+    company: "DevWeekends — Remote",
+    period: "Dec 2025 — May 2026",
+    desc: "Solved 150+ Data Structures & Algorithms problems in C++. Built multiple full-stack MERN apps (e-commerce, real estate) following scalable architecture and best practices. Strengthened system design and backend optimization for production-level apps.",
+    icon: Code,
+  },
+  {
+    role: "Bachelor in Computer Science",
+    company: "University of Engineering and Technology, Lahore",
+    period: "CGPA 3.5 / 4.0",
+    desc: "Studying core CS: data structures & algorithms, OOP, system design fundamentals, databases, and modern software engineering practices.",
     icon: GraduationCap,
   },
 ];
+
 
 const Index = () => (
   <Layout>
@@ -164,11 +172,12 @@ const Index = () => (
         {/* Stats */}
         <FadeIn delay={0.3} className="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
           {[
-            { value: "5+", label: "Projects Built" },
-            { value: "2+", label: "Years Experience" },
-            { value: "1+", label: "Happy Clients" },
-            { value: "100%", label: "Client Satisfaction" },
+            { value: "6+", label: "Projects Shipped" },
+            { value: "1+", label: "Years Experience" },
+            { value: "3", label: "Companies Worked" },
+            { value: "150+", label: "DSA Problems Solved" },
           ].map((stat) => (
+
             <div key={stat.label} className="glass-card p-4 md:p-6 text-center hover:border-primary/20 transition-colors">
               <div className="text-2xl md:text-3xl font-bold font-heading gradient-text">{stat.value}</div>
               <div className="text-xs sm:text-sm text-muted-foreground mt-1">{stat.label}</div>

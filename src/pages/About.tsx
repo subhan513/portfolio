@@ -45,11 +45,12 @@ const About = () => (
             <div className="glass-card p-8">
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { val: "3+", label: "Years Coding" },
-                  { val: "20+", label: "Projects Shipped" },
-                  { val: "15+", label: "Happy Clients" },
+                  { val: "1+", label: "Years Experience" },
+                  { val: "6+", label: "Projects Shipped" },
+                  { val: "3", label: "Companies" },
                   { val: "10+", label: "Technologies" },
                 ].map((s) => (
+
                   <div key={s.label} className="text-center">
                     <div className="text-2xl font-bold font-heading gradient-text">{s.val}</div>
                     <div className="text-xs text-muted-foreground mt-1">{s.label}</div>
@@ -78,8 +79,9 @@ const About = () => (
               <h3 className="text-2xl font-bold font-heading text-foreground">Muhammad Subhan</h3>
               <p className="text-primary font-medium mt-1">Full Stack Developer</p>
               <p className="mt-3 text-muted-foreground leading-relaxed">
-                I'm a self-driven developer with deep expertise in React, Node.js, MongoDB, and modern DevOps practices. Over the past few years I've built e-commerce platforms, real estate marketplaces, and SaaS dashboards for clients worldwide. When I'm not coding, you'll find me exploring new tech, contributing to open source, or sharing knowledge with the dev community.
+                I'm a MERN Stack Developer with 1+ year of experience building and deploying production-grade full-stack web apps. I've worked with TenX, ZedStack, and DevWeekends — shipping SaaS platforms, admin dashboards, AI-powered tools, and REST APIs. I studied Computer Science at UET Lahore (CGPA 3.5/4.0) and love turning complex problems into clean, scalable solutions.
               </p>
+
             </div>
           </div>
         </FadeIn>
