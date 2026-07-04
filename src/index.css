@@ -129,6 +129,34 @@
   }
 }
 
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  @keyframes spin-y {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(360deg); }
+  }
+  .animate-spin-y {
+    animation: spin-y 12s linear infinite;
+  }
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-12px); }
+  }
+  .animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
+
