@@ -45,11 +45,12 @@ const About = () => (
             <div className="glass-card p-8">
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { val: "3+", label: "Years Coding" },
-                  { val: "20+", label: "Projects Shipped" },
-                  { val: "15+", label: "Happy Clients" },
+                  { val: "1+", label: "Years Experience" },
+                  { val: "6+", label: "Projects Shipped" },
+                  { val: "3", label: "Companies" },
                   { val: "10+", label: "Technologies" },
                 ].map((s) => (
+
                   <div key={s.label} className="text-center">
                     <div className="text-2xl font-bold font-heading gradient-text">{s.val}</div>
                     <div className="text-xs text-muted-foreground mt-1">{s.label}</div>
