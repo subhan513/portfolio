@@ -1,159 +1,106 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Code, Code2, Briefcase, Mail, GraduationCap } from "lucide-react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/pagination";
-import heroBg from "@/assets/hero-bg.mp4.asset.json";
-
-
-import {
-  SiReact, SiNextdotjs, SiJavascript, SiTailwindcss, SiRedux,
-  SiNodedotjs, SiExpress, SiJsonwebtokens,
-  SiMongodb, SiMongoose,
-  SiGit, SiGithub, SiPostman, SiVercel,
-} from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
-import { TbApi } from "react-icons/tb";
+import { ArrowRight, Code, Code2, Briefcase, Mail, GraduationCap, Database, Layout as LayoutIcon } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import Layout from "@/components/Layout";
 
 const services = [
-  { icon: Code, title: "Web Development", desc: "Pixel-perfect React, Next.js & MERN applications engineered for speed, accessibility, and conversion." },
+  {
+    icon: Code,
+    title: "Web Development",
+    desc: "Custom, high-performance React and Next.js applications tailored to your business needs.",
+  },
+  {
+    icon: Database,
+    title: "Backend Solutions",
+    desc: "Robust API design and database management for secure, scalable data handling.",
+  },
+  {
+    icon: LayoutIcon,
+    title: "UI/UX Strategy",
+    desc: "Thinking beyond the screen to build user-centric, considered digital products.",
+  },
 ];
 
-const skills = [
-  {
-    category: "Frontend",
-    items: [
-      { name: "React.js", icon: SiReact, color: "#61DAFB" },
-      { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
-      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
-      { name: "Redux", icon: SiRedux, color: "#764ABC" },
-    ],
-  },
-  {
-    category: "Backend",
-    items: [
-      { name: "Node.js", icon: SiNodedotjs, color: "#5FA04E" },
-      { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
-      { name: "REST APIs", icon: TbApi, color: "#10B981" },
-      { name: "JWT Auth", icon: SiJsonwebtokens, color: "#D63AFF" },
-    ],
-  },
-  {
-    category: "Database",
-    items: [
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-      { name: "Mongoose", icon: SiMongoose, color: "#880000" },
-    ],
-  },
-  {
-    category: "Tools",
-    items: [
-      { name: "Git", icon: SiGit, color: "#F05032" },
-      { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
-      { name: "Postman", icon: SiPostman, color: "#FF6C37" },
-      { name: "VS Code", icon: VscVscode, color: "#007ACC" },
-      { name: "Vercel", icon: SiVercel, color: "#FFFFFF" },
-    ],
-  },
+const stack = [
+  "React / Next.js",
+  "TypeScript",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Tailwind CSS",
+  "Redux",
+  "REST APIs",
 ];
 
 const experience = [
   {
     role: "Software Developer",
-    company: "TenX — Lahore, Pakistan (Hybrid)",
+    company: "TenX — Lahore, Pakistan",
     period: "Jun 2026",
-    desc: "Built production API architecture using Node.js, Express, PostgreSQL and Redis caching. Implemented JWT auth, RBAC, file uploads, and background jobs for User & Product modules. Optimized DB queries and API performance by fixing N+1 issues and adding eager loading.",
+    desc: "Production API architecture with Node.js, Express, PostgreSQL and Redis. JWT auth, RBAC, background jobs, and query optimization.",
     icon: Briefcase,
   },
   {
     role: "Full Stack Developer",
-    company: "ZedStack — Lahore, Pakistan (Hybrid)",
+    company: "ZedStack — Lahore, Pakistan",
     period: "Apr 2025 — Sep 2025",
-    desc: "Developed an AI-powered Headshot Generator using the MERN stack. Integrated AI APIs for image generation and reduced processing time by ~30%. Built a responsive React interface for seamless upload, preview, and generation workflow.",
+    desc: "MERN AI-powered Headshot Generator. Integrated AI APIs and reduced processing time by ~30% with a fluid React interface.",
     icon: Code,
   },
   {
-    role: "Software Engineering & DSA Mentee",
+    role: "SWE & DSA Mentee",
     company: "DevWeekends — Remote",
     period: "Dec 2025 — May 2026",
-    desc: "Solved 150+ Data Structures & Algorithms problems in C++. Built multiple full-stack MERN apps (e-commerce, real estate) following scalable architecture and best practices. Strengthened system design and backend optimization for production-level apps.",
+    desc: "150+ DSA problems in C++ and multiple full-stack MERN apps (e-commerce, real estate) with scalable architecture.",
     icon: Code,
   },
   {
-    role: "Bachelor in Computer Science",
-    company: "University of Engineering and Technology, Lahore",
+    role: "BS Computer Science",
+    company: "University of Engineering & Technology, Lahore",
     period: "CGPA 3.5 / 4.0",
-    desc: "Studying core CS: data structures & algorithms, OOP, system design fundamentals, databases, and modern software engineering practices.",
+    desc: "Core CS foundations: data structures, algorithms, OOP, databases and modern software engineering.",
     icon: GraduationCap,
   },
 ];
 
-
 const Index = () => (
   <Layout>
-    {/* Hero */}
-    <section className="relative w-full overflow-x-hidden overflow-y-hidden min-h-[100svh] flex items-center py-20 sm:py-24 md:py-32 px-4">
-      {/* Background video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-40"
-      >
-        <source src={heroBg.url} type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 bg-background/70" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.25),transparent_60%)]" />
-      <div className="absolute top-1/4 -right-32 hidden h-[500px] w-[500px] rounded-full bg-primary/10 blur-[100px] animate-float sm:block" />
-      <div className="absolute bottom-1/4 -left-32 hidden h-[400px] w-[400px] rounded-full bg-accent/10 blur-[100px] animate-float sm:block" style={{ animationDelay: "3s" }} />
-      <div className="container-narrow relative w-full min-w-0">
-        <FadeIn className="w-full max-w-5xl mx-auto text-center">
+    {/* Hero — Serene Minimalist asymmetric 60/40 */}
+    <section className="relative w-full overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 -left-40 h-[500px] w-[500px] rounded-full bg-primary/10 blur-[120px]" />
+        <div className="absolute -bottom-40 -right-32 h-[420px] w-[420px] rounded-full bg-accent/10 blur-[120px]" />
+      </div>
 
-          <h1 className="mx-auto max-w-[22rem] sm:max-w-2xl md:max-w-5xl text-3xl min-[380px]:text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight leading-[1.12] md:leading-[1.05] text-foreground break-words">
-
-            Full Stack <span className="block sm:inline">Developer</span>{" "}
-            <br className="hidden md:block" />
-            <span className="block sm:inline">Building <span className="gradient-text">Modern Web Apps</span></span>
+      <div className="container-narrow relative px-6 py-24 md:py-32 grid grid-cols-1 md:grid-cols-10 gap-12 items-center">
+        <FadeIn className="md:col-span-6 space-y-8">
+          <span className="text-primary text-sm font-medium tracking-[0.2em] uppercase">
+            Full-Stack Developer
+          </span>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading leading-[0.95] text-foreground">
+            Crafting <span className="italic gradient-text">digital</span> experiences that feel like magic.
           </h1>
-
-          {/* Swiper rotating taglines */}
-          <Swiper
-            modules={[Autoplay, EffectFade, Pagination]}
-            effect="fade"
-            fadeEffect={{ crossFade: true }}
-            slidesPerView={1}
-            allowTouchMove={false}
-            autoplay={{ delay: 3500, disableOnInteraction: false }}
-            loop
-            pagination={{ clickable: true }}
-            className="hero-copy-swiper mt-6 md:mt-8 max-w-3xl mx-auto"
-          >
-            {[
-              "I craft scalable, high-performance web apps using the MERN stack and modern cloud infrastructure.",
-              "From concept to deployment — pixel-perfect React & Next.js experiences engineered for speed.",
-              "Turning ideas into polished digital products that users love and businesses rely on.",
-            ].map((t) => (
-              <SwiperSlide key={t}>
-                <p className="h-28 sm:h-24 md:h-28 text-base sm:text-lg md:text-2xl text-muted-foreground leading-7 md:leading-relaxed px-1 sm:px-4 flex items-center justify-center text-center overflow-hidden">
-                  <span className="block max-w-full whitespace-normal break-words">{t}</span>
-                </p>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="mt-8 md:mt-12 flex justify-center">
-            <Link to="/projects" className="gradient-bg text-primary-foreground px-7 py-3 md:px-9 md:py-4 rounded-lg md:rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-base md:text-lg shadow-lg shadow-primary/25">
-              View My Work <ArrowRight size={20} />
+          <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
+            I am Muhammad Subhan. I build scalable applications with a focus on clean code
+            and exceptional user experience.
+          </p>
+          <div className="flex flex-wrap gap-4 pt-2">
+            <Link
+              to="/projects"
+              className="px-7 py-3.5 bg-primary text-primary-foreground font-semibold hover:bg-accent hover:text-accent-foreground transition-colors inline-flex items-center gap-2"
+            >
+              View Projects <ArrowRight size={18} />
+            </Link>
+            <Link
+              to="/contact"
+              className="px-7 py-3.5 border border-border hover:border-primary text-foreground transition-colors"
+            >
+              Get in Touch
             </Link>
           </div>
 
-          {/* Social links */}
-          <div className="mt-7 md:mt-10 flex justify-center gap-3 md:gap-4">
+          {/* Social */}
+          <div className="flex gap-3 pt-4">
             {[
               { Icon: Code2, href: "https://github.com/subhan513", label: "GitHub" },
               { Icon: Briefcase, href: "https://www.linkedin.com/in/muhammadsubhanwebdev/", label: "LinkedIn" },
@@ -165,50 +112,68 @@ const Index = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="p-2.5 md:p-3 rounded-xl glass-card hover:border-primary/40 text-muted-foreground hover:text-primary transition-all"
+                className="p-3 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-colors"
               >
-                <Icon size={20} />
+                <Icon size={18} />
               </a>
             ))}
           </div>
         </FadeIn>
 
-        {/* Stats */}
-        <FadeIn delay={0.3} className="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+        <FadeIn delay={0.2} className="md:col-span-4 flex justify-center">
+          <div className="relative w-full aspect-square max-w-sm">
+            <div className="absolute inset-0 bg-card rounded-3xl -rotate-6 transition-transform hover:rotate-0 duration-700" />
+            <div className="absolute inset-0 border border-primary/30 rounded-3xl translate-x-4 translate-y-4" />
+            <div className="relative h-full w-full bg-background border border-border rounded-3xl flex items-center justify-center overflow-hidden">
+              <pre className="p-6 md:p-8 font-mono text-xs md:text-sm text-primary/70 leading-relaxed">
+{`const profile = {
+  name: 'Subhan',
+  role: 'Full-Stack',
+  stack: 'MERN',
+  passion: 'Clean UX',
+  coffee: true,
+};`}
+              </pre>
+            </div>
+          </div>
+        </FadeIn>
+      </div>
+
+      {/* Stats strip */}
+      <div className="container-narrow px-6 pb-16">
+        <FadeIn delay={0.3} className="grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-border pt-10">
           {[
             { value: "6+", label: "Projects Shipped" },
             { value: "1+", label: "Years Experience" },
-            { value: "3", label: "Companies Worked" },
-            { value: "150+", label: "DSA Problems Solved" },
-          ].map((stat) => (
-
-            <div key={stat.label} className="glass-card p-4 md:p-6 text-center hover:border-primary/20 transition-colors">
-              <div className="text-2xl md:text-3xl font-bold font-heading gradient-text">{stat.value}</div>
-              <div className="text-xs sm:text-sm text-muted-foreground mt-1">{stat.label}</div>
+            { value: "3", label: "Companies" },
+            { value: "150+", label: "DSA Problems" },
+          ].map((s) => (
+            <div key={s.label} className="text-center md:text-left">
+              <div className="text-3xl md:text-4xl font-heading italic text-accent">{s.value}</div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{s.label}</div>
             </div>
           ))}
         </FadeIn>
       </div>
     </section>
 
-    {/* Services / What I Do */}
-    <section className="section-padding bg-secondary/30">
-      <div className="container-narrow">
-        <FadeIn className="text-center mb-12">
-          <p className="text-sm font-medium text-primary mb-2">What I Do</p>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground">Services I Offer</h2>
-          <p className="mt-3 text-muted-foreground max-w-xl mx-auto">End-to-end development services to bring your ideas to life — from concept to deployment.</p>
+    {/* Services */}
+    <section className="border-y border-border">
+      <div className="container-narrow px-6 py-24">
+        <FadeIn className="mb-14">
+          <h2 className="text-4xl md:text-5xl font-heading text-foreground mb-4">Services</h2>
+          <div className="h-[2px] w-12 bg-primary" />
         </FadeIn>
-        <div className="grid md:grid-cols-1 max-w-2xl mx-auto gap-6">
-          {services.map((service, i) => (
-            <FadeIn key={service.title} delay={i * 0.1}>
-              <div className="glass-card p-8 group hover:border-primary/30 transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mb-5">
-                  <service.icon size={24} className="text-primary-foreground" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {services.map((s, i) => (
+            <FadeIn key={s.title} delay={i * 0.08}>
+              <div className="p-8 bg-card/30 border border-border hover:border-primary/50 transition-colors h-full group">
+                <div className="w-12 h-12 mb-6 bg-card flex items-center justify-center text-accent">
+                  <s.icon size={22} />
                 </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground">{service.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
-                <Link to="/services" className="mt-4 text-sm text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                <h3 className="text-xl font-heading text-foreground mb-3">{s.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                <Link to="/services" className="mt-5 inline-flex items-center gap-1 text-sm text-primary group-hover:gap-2 transition-all">
                   Learn more <ArrowRight size={14} />
                 </Link>
               </div>
@@ -218,62 +183,51 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Skills / Tech Stack */}
-    <section className="section-padding">
-      <div className="container-narrow">
-        <FadeIn className="text-center mb-12">
-          <p className="text-sm font-medium text-primary mb-2">Tech Stack</p>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground">Skills & Technologies</h2>
-          <p className="mt-3 text-muted-foreground max-w-xl mx-auto">Tools and technologies I use to build modern, scalable applications.</p>
+    {/* Skills & Stack */}
+    <section className="container-narrow px-6 py-24">
+      <div className="flex flex-col md:flex-row gap-12">
+        <FadeIn className="md:w-1/3">
+          <h2 className="text-4xl md:text-5xl font-heading text-foreground mb-6">Skills & Stack</h2>
+          <p className="text-muted-foreground leading-relaxed">
+            A specialized toolkit refined while shipping production-ready MERN and Next.js
+            applications.
+          </p>
         </FadeIn>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skills.map((group, i) => (
-            <FadeIn key={group.category} delay={i * 0.08}>
-              <div className="glass-card p-6 h-full hover:border-primary/30 transition-colors">
-                <h3 className="font-heading font-semibold text-foreground mb-5 text-center">{group.category}</h3>
-                <div className="grid grid-cols-3 gap-3">
-                  {group.items.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group flex flex-col items-center justify-center gap-2 p-3 rounded-xl bg-secondary/50 border border-border hover:border-primary/40 hover:bg-secondary transition-all hover:-translate-y-1"
-                      title={item.name}
-                    >
-                      <item.icon size={36} style={{ color: item.color }} className="transition-transform group-hover:scale-110" />
-                      <span className="text-[10px] text-muted-foreground text-center leading-tight">{item.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </FadeIn>
+        <FadeIn delay={0.15} className="md:w-2/3 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {stack.map((t) => (
+            <div
+              key={t}
+              className="px-4 py-3 bg-card text-accent text-center text-sm font-medium border border-border hover:border-primary/50 transition-colors"
+            >
+              {t}
+            </div>
           ))}
-        </div>
+        </FadeIn>
       </div>
     </section>
 
     {/* Experience Timeline */}
-    <section className="section-padding bg-secondary/30">
-      <div className="container-narrow">
-        <FadeIn className="text-center mb-12">
-          <p className="text-sm font-medium text-primary mb-2">Journey</p>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-foreground">Experience & Education</h2>
+    <section className="border-t border-border">
+      <div className="container-narrow px-6 py-24">
+        <FadeIn className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-heading text-foreground">Career Path</h2>
+          <div className="h-[2px] w-12 bg-primary mx-auto mt-4" />
         </FadeIn>
         <div className="max-w-3xl mx-auto relative">
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-border md:left-1/2" aria-hidden />
-          <div className="space-y-8">
+          <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-border to-transparent md:-translate-x-px" aria-hidden />
+          <div className="space-y-12">
             {experience.map((exp, i) => (
-              <FadeIn key={exp.role} delay={i * 0.1}>
-                <div className={`relative flex flex-col md:flex-row gap-6 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full gradient-bg ring-4 ring-background" />
-                  <div className="md:w-1/2 pl-16 md:pl-0 md:px-8">
-                    <div className="glass-card p-6 hover:border-primary/30 transition-colors">
+              <FadeIn key={exp.role} delay={i * 0.08}>
+                <div className={`relative flex flex-col md:flex-row gap-6 ${i % 2 === 0 ? "" : "md:flex-row-reverse"}`}>
+                  <div className="absolute left-5 md:left-1/2 -translate-x-1/2 top-2 w-3 h-3 rounded-full bg-primary ring-4 ring-background" />
+                  <div className="md:w-1/2 pl-14 md:px-8">
+                    <div className="p-6 bg-card/20 border border-border hover:border-primary/40 transition-colors">
                       <div className="flex items-center gap-3 mb-2">
-                        <div className="w-9 h-9 rounded-lg gradient-bg flex items-center justify-center shrink-0">
-                          <exp.icon size={16} className="text-primary-foreground" />
-                        </div>
-                        <span className="text-xs font-medium text-primary">{exp.period}</span>
+                        <exp.icon size={14} className="text-accent" />
+                        <time className="text-xs font-bold tracking-widest uppercase text-accent">{exp.period}</time>
                       </div>
-                      <h3 className="font-heading font-semibold text-foreground">{exp.role}</h3>
-                      <p className="text-sm text-muted-foreground mt-0.5">{exp.company}</p>
+                      <h3 className="font-heading text-xl text-foreground">{exp.role}</h3>
+                      <p className="text-sm text-muted-foreground mt-1">{exp.company}</p>
                       <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{exp.desc}</p>
                     </div>
                   </div>
@@ -287,18 +241,26 @@ const Index = () => (
     </section>
 
     {/* CTA */}
-    <section className="section-padding">
-      <div className="container-narrow">
-        <FadeIn>
-          <div className="gradient-bg rounded-2xl p-10 md:p-16 text-center glow-shadow">
-            <h2 className="text-3xl md:text-4xl font-bold font-heading text-primary-foreground">Have a Project in Mind?</h2>
-            <p className="mt-3 text-primary-foreground/80 max-w-lg mx-auto">Let's collaborate and turn your vision into a high-performance digital product.</p>
-            <Link to="/contact" className="mt-6 inline-flex items-center gap-2 bg-background text-foreground px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity">
-              Let's Talk <ArrowRight size={18} />
+    <section className="px-6 py-24">
+      <FadeIn>
+        <div className="max-w-5xl mx-auto bg-card p-12 md:p-24 text-center relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-3xl -mr-32 -mt-32" />
+          <div className="relative z-10">
+            <h2 className="text-4xl md:text-6xl font-heading italic text-foreground mb-6">
+              Let's build something exceptional.
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg mb-10 max-w-xl mx-auto">
+              Currently available for selected freelance projects and full-stack collaborations.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-accent text-accent-foreground font-semibold hover:scale-105 transition-transform"
+            >
+              Start a Conversation <ArrowRight size={18} />
             </Link>
           </div>
-        </FadeIn>
-      </div>
+        </div>
+      </FadeIn>
     </section>
   </Layout>
 );
