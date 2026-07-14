@@ -7,8 +7,17 @@ import bugHunterAi from "@/assets/bug-hunter-ai.jpg";
 import ecommerceAdmin from "@/assets/ecommerce-admin.jpg";
 import educationalWebsite from "@/assets/educational-website.jpg";
 import moviePlatform from "@/assets/movie-platform.jpg";
+import lmsPlatform from "@/assets/lms-platform.jpg";
 
 const projects = [
+  {
+    title: "Production-Grade LMS Platform",
+    category: "Full Stack",
+    desc: "A production-ready Learning Management System with secure JWT auth, RBAC, instructor & admin dashboards, course enrollment, and order management. Complete course features — video lessons, reviews, Q&A, notifications, dynamic access control. Integrated Stripe payments and Cloudinary media storage over scalable Express/MongoDB REST APIs, optimized with Next.js App Router, RTK Query, and responsive Tailwind UI.",
+    tech: ["Next.js", "TypeScript", "Node.js", "Express", "MongoDB", "Redux Toolkit", "Stripe", "Cloudinary", "Tailwind CSS"],
+    image: lmsPlatform,
+    demo: "https://lms-frontend-weld-delta.vercel.app/",
+  },
   {
     title: "Etihad Estate — Real Estate Platform",
     category: "Full Stack",
